@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lolita — რესტორანი და ბარი, თბილისი</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { cream:'#FBF6EC', ink:'#241F19', olive:'#6E7C4A', terracotta:'#C1613B', card:'#F2E9D8', line:'#E4D8BE' },
+        fontFamily: { display:['"Noto Serif Georgian"','serif'], body:['"Noto Sans Georgian"','sans-serif'] },
+        keyframes: {
+          float: { '0%,100%':{transform:'translateY(0) rotate(0deg)'}, '50%':{transform:'translateY(-16px) rotate(3deg)'} },
+          floatB: { '0%,100%':{transform:'translateY(0) rotate(0deg)'}, '50%':{transform:'translateY(14px) rotate(-4deg)'} },
+          marquee: { '0%':{transform:'translateX(0)'}, '100%':{transform:'translateX(-50%)'} },
+        },
+        animation: { float:'float 7s ease-in-out infinite', floatB:'floatB 9s ease-in-out infinite', marquee:'marquee 24s linear infinite' }
+      }
+    }
+  }
+</script>
+<style>
+  html{scroll-behavior:smooth;scroll-padding-top:76px;}
+  :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+  body{font-family:'Noto Sans Georgian',sans-serif;}
+  h1,h2,h3,.font-display{font-family:'Noto Serif Georgian',serif;}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.show{opacity:1;transform:translateY(0);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:grid;}
+  ::selection{background:#C1613B;color:#FBF6EC;}
+</style>
+</head>
+<body class="bg-cream text-ink">
+
+<nav class="fixed top-0 inset-x-0 z-30 bg-cream/85 backdrop-blur-md border-b border-line">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <span class="font-display text-2xl font-semibold tracking-tight">Lolita</span>
+    <div class="hidden md:flex gap-8 text-sm text-ink/70">
+      <a href="#about" class="hover:text-terracotta transition">ჩვენ შესახებ</a>
+      <a href="#menu" class="hover:text-terracotta transition">მენიუ</a>
+      <a href="#booking" class="hover:text-terracotta transition">ჯავშანი</a>
+      <a href="#contact" class="hover:text-terracotta transition">კონტაქტი</a>
+    </div>
+    <a href="tel:+995322020299" class="text-sm font-medium bg-ink text-cream px-5 py-2.5 rounded-full hover:bg-terracotta transition">032 202 02 99</a>
+  </div>
+</nav>
+
+<header class="relative overflow-hidden pt-40 pb-24 px-6">
+  <div class="absolute -top-10 right-[6%] w-40 h-40 md:w-64 md:h-64 rounded-full bg-terracotta/20 blur-2xl animate-float"></div>
+  <div class="absolute top-40 left-[4%] w-32 h-32 md:w-52 md:h-52 rounded-full bg-olive/25 blur-2xl animate-floatB"></div>
+  <div class="relative max-w-3xl mx-auto text-center">
+    <span class="inline-block text-xs tracking-[0.2em] uppercase text-olive font-semibold mb-5">რესტორანი და ბარი · თბილისი</span>
+    <h1 class="font-display text-6xl md:text-8xl font-semibold leading-[0.95] mb-6">Lolita</h1>
+    <p class="text-lg text-ink/70 max-w-xl mx-auto mb-8">საუზმე, პასტა, ხაჭაპური და ნატურალური ღვინო თბილისის ტერასაზე — დილიდან ღამის ორ საათამდე, ყოველ დღე.</p>
+    <div class="flex items-center justify-center gap-4 flex-wrap mb-10">
+      <span class="flex items-center gap-1.5 bg-card border border-line rounded-full px-4 py-2 text-sm"><b class="font-display">4,2</b> ★ Google · 201</span>
+      <span class="flex items-center gap-1.5 bg-card border border-line rounded-full px-4 py-2 text-sm"><b class="font-display">9,2</b> Wolt · 500</span>
+    </div>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <a href="#booking" class="bg-terracotta text-cream px-7 py-3.5 rounded-full font-medium hover:scale-105 transition-transform">მაგიდის დაჯავშნა</a>
+      <a href="#menu" class="border border-ink/20 px-7 py-3.5 rounded-full font-medium hover:bg-ink hover:text-cream transition">მენიუს ნახვა</a>
+    </div>
+  </div>
+</header>
+
+<div class="border-y border-line bg-ink text-cream py-3 overflow-hidden whitespace-nowrap">
+  <div class="inline-flex animate-marquee text-sm tracking-wide">
+    <span class="mx-6">ღიაა ახლა · იხურება 02:00-ზე</span>
+    <span class="mx-6">•</span>
+    <span class="mx-6">ტერასა · დახურული დარბაზი · კოქტეილები</span>
+    <span class="mx-6">•</span>
+    <span class="mx-6">საშუალო ჩეკი 20–70 ₾</span>
+    <span class="mx-6">•</span>
+    <span class="mx-6">ღიაა ახლა · იხურება 02:00-ზე</span>
+    <span class="mx-6">•</span>
+    <span class="mx-6">ტერასა · დახურული დარბაზი · კოქტეილები</span>
+    <span class="mx-6">•</span>
+    <span class="mx-6">საშუალო ჩეკი 20–70 ₾</span>
+    <span class="mx-6">•</span>
+  </div>
+</div>
+
+<section id="about" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-14 items-center">
+  <div class="reveal">
+    <span class="text-xs tracking-[0.2em] uppercase text-olive font-semibold">ჩვენ შესახებ</span>
+    <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3 mb-5 leading-tight">ადგილი, სადაც საუზმე<br>ნელა გადადის ღვინოში</h2>
+    <p class="text-ink/70 mb-6">Lolita — ტერასა და მყუდრო დარბაზია თამარ ჩოველიძის ქუჩაზე, სადაც დილა იწყება მაჩა-ლატეთი და ავოკადოს ტოსტით, დღე — პასტებითა და პიცეტებით, ხოლო საღამო — ნატურალური ღვინითა და კოქტეილებით. ჩვეულებრივ აქ 1–2,5 საათს ატარებენ, და თითქმის ყოველთვის ჩნდება მიზეზი დარჩენისთვის.</p>
+    <div class="grid grid-cols-2 gap-3 text-sm">
+      <div class="bg-card border border-line rounded-2xl px-4 py-3">🌿 ტერასა</div>
+      <div class="bg-card border border-line rounded-2xl px-4 py-3">🏠 დახურული დარბაზი</div>
+      <div class="bg-card border border-line rounded-2xl px-4 py-3">🍸 კოქტეილების ასორტიმენტი</div>
+      <div class="bg-card border border-line rounded-2xl px-4 py-3">🍷 ნატურალური ღვინოები</div>
+    </div>
+  </div>
+  <div class="reveal grid grid-cols-2 gap-4">
+    <div class="bg-card border border-line rounded-3xl p-6 aspect-[4/5] flex flex-col justify-end animate-float">
+      <span class="font-display text-3xl font-semibold text-terracotta">02:00</span>
+      <span class="text-sm text-ink/60 mt-1">ვმუშაობთ გვიანობამდე</span>
+    </div>
+    <div class="bg-ink text-cream rounded-3xl p-6 aspect-[4/5] flex flex-col justify-end mt-8 animate-floatB">
+      <span class="font-display text-3xl font-semibold">20–70 ₾</span>
+      <span class="text-sm text-cream/60 mt-1">საშუალო ჩეკი ერთ სულზე</span>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="reveal text-center mb-12">
+    <span class="text-xs tracking-[0.2em] uppercase text-olive font-semibold">მენიუ</span>
+    <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">Lolita-ს კარტიდან</h2>
+  </div>
+  <div id="tabs" class="reveal flex gap-2 justify-center flex-wrap mb-10 text-sm">
+    <button data-tab="breakfast" class="tab-btn px-5 py-2.5 rounded-full border border-line font-medium transition">საუზმე</button>
+    <button data-tab="pizzette" class="tab-btn px-5 py-2.5 rounded-full border border-line font-medium transition">პიცეტა</button>
+    <button data-tab="pasta" class="tab-btn px-5 py-2.5 rounded-full border border-line font-medium transition">პასტა</button>
+    <button data-tab="large" class="tab-btn px-5 py-2.5 rounded-full border border-line font-medium transition">ძირითადი კერძები</button>
+    <button data-tab="salad" class="tab-btn px-5 py-2.5 rounded-full border border-line font-medium transition">სალათები</button>
+    <button data-tab="dessert" class="tab-btn px-5 py-2.5 rounded-full border border-line font-medium transition">დესერტი და ღვინო</button>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-5">
+    <div data-panel="breakfast" class="tab-panel md:grid-cols-3 md:col-span-3 grid gap-5">
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">კვერცხის ბანი ორაგულით</h3><span class="text-terracotta font-display">32 ₾</span></div><p class="text-sm text-ink/60">ჩამწვარი კვერცხი, შებოლილი ორაგული, ავოკადო, კრემ-ყველი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">ტოსტი ავოკადოთი</h3><span class="text-terracotta font-display">24 ₾</span></div><p class="text-sm text-ink/60">ფრანგული პური, ავოკადო, პაშოტ-კვერცხი, კუნჟუტი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">ვაფლი</h3><span class="text-terracotta font-display">19 ₾</span></div><p class="text-sm text-ink/60">ხაჭოს კრემი, მარწყვი, ნეკერჩხლის სიროფი</p></article>
+    </div>
+
+    <div data-panel="pizzette" class="tab-panel md:grid-cols-3 md:col-span-3 grid gap-5">
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">Lolita ხაჭაპური</h3><span class="text-terracotta font-display">25 ₾</span></div><p class="text-sm text-ink/60">სულგუნი, მოცარელა, იმერული ყველი, კვერცხი, კარაქი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">ცხარე სალამი</h3><span class="text-terracotta font-display">28 ₾</span></div><p class="text-sm text-ink/60">მოცარელა, პომიდვრის სოუსი, სალამი, ჩილი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">მარგარიტა</h3><span class="text-terracotta font-display">26 ₾</span></div><p class="text-sm text-ink/60">პომიდვრის სოუსი, ახალი მოცარელა</p></article>
+    </div>
+
+    <div data-panel="pasta" class="tab-panel md:grid-cols-3 md:col-span-3 grid gap-5">
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">მაფალდინე ტრიუფელით</h3><span class="text-terracotta font-display">37 ₾</span></div><p class="text-sm text-ink/60">პარმეზანი, შავი პილპილი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">რიგატონი ბოლონეზე</h3><span class="text-terracotta font-display">36 ₾</span></div><p class="text-sm text-ink/60">საქონლის ხორცი, ბეკონი, პომიდორი, წითელი ღვინო</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">Aglio e Olio კრევეტებით</h3><span class="text-terracotta font-display">30 ₾</span></div><p class="text-sm text-ink/60">ნიორი, ზეითუნის ზეთი, კრევეტები</p></article>
+    </div>
+
+    <div data-panel="large" class="tab-panel md:grid-cols-3 md:col-span-3 grid gap-5">
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">BBQ ნეკნები</h3><span class="text-terracotta font-display">70 ₾</span></div><p class="text-sm text-ink/60">ბარბექიუს სოუსი, ხახვის რგოლები, კოულსლო</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">ტაკო Birria</h3><span class="text-terracotta font-display">26 ₾</span></div><p class="text-sm text-ink/60">დუნდული საქონლის ხორცი, ტორტილა, მოცარელა, კამა</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">შემწვარი წიწილა</h3><span class="text-terracotta font-display">39 ₾</span></div><p class="text-sm text-ink/60">გამომცხვარი სიმინდით</p></article>
+    </div>
+
+    <div data-panel="salad" class="tab-panel md:grid-cols-3 md:col-span-3 grid gap-5">
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">სალათი კრევეტებით</h3><span class="text-terracotta font-display">34 ₾</span></div><p class="text-sm text-ink/60">მანგო, ფრეგოლა, რუკოლა, ცხარე ლაიმის სოუსი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">მარწყვი და სტრაჩატელა</h3><span class="text-terracotta font-display">23 ₾</span></div><p class="text-sm text-ink/60">რუკოლა, ბალზამიკო</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">მსხალი და კარამელიზებული კაკალი</h3><span class="text-terracotta font-display">28 ₾</span></div><p class="text-sm text-ink/60">მიზუნა, დავარგებული ყველი, თაფლ-მდოგვის სოუსი</p></article>
+    </div>
+
+    <div data-panel="dessert" class="tab-panel md:grid-cols-3 md:col-span-3 grid gap-5">
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">ტირამისუ</h3><span class="text-terracotta font-display">19 ₾</span></div><p class="text-sm text-ink/60">მასკარპონე, ესპრესო, პორტვეინი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">სტაფილოს ტორტი</h3><span class="text-terracotta font-display">14 ₾</span></div><p class="text-sm text-ink/60">კაკალი, ჯანჯაფილის კრემ-ყველი</p></article>
+      <article class="bg-card border border-line rounded-2xl p-6 hover:-translate-y-1.5 hover:shadow-lg transition"><div class="flex justify-between items-start mb-2"><h3 class="font-display text-lg font-semibold">Pet-Nat Les Capriades</h3><span class="text-terracotta font-display">79 ₾</span></div><p class="text-sm text-ink/60">ნატურალური თეთრი ბუშტოვანი ღვინო, 0.75 ლ</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="bg-ink text-cream py-24 px-6">
+  <div class="max-w-2xl mx-auto reveal">
+    <div class="text-center mb-10">
+      <span class="text-xs tracking-[0.2em] uppercase text-terracotta font-semibold">ჯავშანი</span>
+      <h2 class="font-display text-4xl md:text-5xl font-semibold mt-3">მაგიდის დაჯავშნა</h2>
+      <p class="text-cream/60 mt-3">დატოვეთ განაცხადი — დაგირეკავთ დასადასტურებლად. სასწრაფო ჯავშნისთვის დარეკეთ პირდაპირ: <a href="tel:+995322020299" class="underline hover:text-terracotta">032 202 02 99</a></p>
+    </div>
+    <form id="bookingForm" class="grid sm:grid-cols-2 gap-4">
+      <input required placeholder="სახელი" class="bg-cream/10 border border-cream/20 rounded-xl px-4 py-3.5 placeholder-cream/40 focus:outline-none focus:ring-2 focus:ring-terracotta transition">
+      <input required type="tel" placeholder="ტელეფონი" class="bg-cream/10 border border-cream/20 rounded-xl px-4 py-3.5 placeholder-cream/40 focus:outline-none focus:ring-2 focus:ring-terracotta transition">
+      <input required type="date" class="bg-cream/10 border border-cream/20 rounded-xl px-4 py-3.5 placeholder-cream/40 focus:outline-none focus:ring-2 focus:ring-terracotta transition [color-scheme:dark]">
+      <input required type="time" class="bg-cream/10 border border-cream/20 rounded-xl px-4 py-3.5 placeholder-cream/40 focus:outline-none focus:ring-2 focus:ring-terracotta transition [color-scheme:dark]">
+      <select required class="bg-cream/10 border border-cream/20 rounded-xl px-4 py-3.5 focus:outline-none focus:ring-2 focus:ring-terracotta transition sm:col-span-2 [color-scheme:dark]">
+        <option value="">სტუმრების რაოდენობა</option>
+        <option>1–2 სტუმარი</option><option>3–4 სტუმარი</option><option>5–8 სტუმარი</option><option>8-ზე მეტი</option>
+      </select>
+      <textarea placeholder="სურვილები (არასავალდებულო)" rows="3" class="bg-cream/10 border border-cream/20 rounded-xl px-4 py-3.5 placeholder-cream/40 focus:outline-none focus:ring-2 focus:ring-terracotta transition sm:col-span-2"></textarea>
+      <button type="submit" class="sm:col-span-2 bg-terracotta text-cream rounded-xl px-6 py-4 font-medium hover:brightness-110 hover:scale-[1.01] transition-transform">განაცხადის გაგზავნა</button>
+    </form>
+    <div id="bookingSuccess" class="hidden text-center bg-cream/10 border border-cream/20 rounded-2xl p-8 mt-4">
+      <div class="text-3xl mb-2">✓</div>
+      <p class="font-display text-xl">გმადლობთ! განაცხადი მიღებულია.</p>
+      <p class="text-cream/60 text-sm mt-1">დაგიკავშირდებით ჯავშნის დასადასტურებლად.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-8 text-sm">
+  <div class="reveal">
+    <h3 class="font-display text-lg font-semibold mb-2">მისამართი</h3>
+    <p class="text-ink/70">თამარ ჩოველიძის ქ. 7, თბილისი</p>
+  </div>
+  <div class="reveal">
+    <h3 class="font-display text-lg font-semibold mb-2">სამუშაო საათები</h3>
+    <p class="text-ink/70">ღიაა ახლა · იხურება 02:00-ზე</p>
+    <p class="text-ink/70 mt-1">თვითგატანა — 21:00 საათამდე</p>
+  </div>
+  <div class="reveal">
+    <h3 class="font-display text-lg font-semibold mb-2">კონტაქტი</h3>
+    <p class="text-ink/70"><a href="tel:+995322020299" class="hover:text-terracotta">032 202 02 99</a></p>
+    <div class="flex gap-4 mt-2">
+      <a href="https://www.instagram.com/lolita.tbilisi/" class="hover:text-terracotta">Instagram</a>
+      <a href="https://www.facebook.com/Lolita.Tbilisi/" class="hover:text-terracotta">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line py-8 text-center text-xs text-ink/50">
+  Lolita · თბილისი · 4,2 ★ Google (201) · 9,2 Wolt (500)
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  function setTab(name){
+    tabs.forEach(t=>t.classList.toggle('bg-ink',t.dataset.tab===name));
+    tabs.forEach(t=>t.classList.toggle('text-cream',t.dataset.tab===name));
+    panels.forEach(p=>p.classList.toggle('active',p.dataset.panel===name));
+  }
+  tabs.forEach(t=>t.addEventListener('click',()=>setTab(t.dataset.tab)));
+  setTab('breakfast');
+
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+  },{threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    this.classList.add('hidden');
+    document.getElementById('bookingSuccess').classList.remove('hidden');
+  });
+</script>
+
+</body>
+</html>
